@@ -1,0 +1,13 @@
+
+/.vscode
+/vir
+/wvir
+/lvir
+/vir/
+*.pyc
+*.pyo
+/app/core/bot/page
+__pycache__/
+test.py
+monterface/__init__.py
+
