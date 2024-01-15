@@ -24,3 +24,14 @@ class TimestampSchema(BaseModel):
             return updated_at.isoformat()
 
         return None
+
+class PersistentDeletion(BaseModel):
+    deleted_at: datetime | None = Field(default=None)
+    is_deleted: bool = False
+
+    @field_serializer('deleted_at')
+    def serialize_dates(self, deleted_at: datetime | None, _info: Any) -> str | None:
+        if deleted_at is not None:
+            return deleted_at.isoformat()
+        
+        return None

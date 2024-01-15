@@ -1,9 +1,10 @@
 import asyncio
 from pydantic import BaseModel
+from schemas.core import TimestampSchema
 from database.mongo import db
 from schemas.mongo import FromMongo
 
-class PersontoDB(BaseModel):
+class PersontoDB(TimestampSchema):
     name: str
     age: int
     
@@ -24,5 +25,5 @@ async def get_person():
     person = Person(**out) # type: ignore
     return person
 
-# print(asyncio.run(insert_person()))
+print(asyncio.run(insert_person()))
 print(asyncio.run(get_person()))
