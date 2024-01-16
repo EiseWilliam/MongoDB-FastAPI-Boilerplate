@@ -14,6 +14,7 @@ class BaseCRUD(Generic[CreateSchema, ReadSchema, UpdateSchema]):
     def __init__(
         self,
         collection: str,
+        read_model: ReadSchema,
     ):
         self._collection = collection
 

@@ -22,8 +22,7 @@ async def insert_person():
 
 async def get_person():
     out = await db.persons.find_one({"name": "Jane"})
-    person = Person(**out) # type: ignore
-    return person
+    return Person(**out)
 
 print(asyncio.run(insert_person()))
 print(asyncio.run(get_person()))

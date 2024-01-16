@@ -1,11 +1,14 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../priweb"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../priweb"
+    },
+    {
+      "path": "../my-web"
+    }
+  ],
+  "settings": {}
 }
