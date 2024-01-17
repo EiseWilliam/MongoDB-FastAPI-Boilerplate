@@ -8,6 +8,9 @@
     },
     {
       "path": "../my-web"
+    },
+    {
+      "path": "../roadersmap-apis"
     }
   ],
   "settings": {}

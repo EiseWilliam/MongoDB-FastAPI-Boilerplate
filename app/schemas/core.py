@@ -13,17 +13,11 @@ class TimestampSchema(BaseModel):
 
     @field_serializer("created_at")
     def serialize_dt(self, created_at: datetime | None, _info: Any) -> str | None:
-        if created_at is not None:
-            return created_at.isoformat()
-        
-        return None
+        return created_at.isoformat() if created_at is not None else None
 
     @field_serializer("updated_at")
     def serialize_updated_at(self, updated_at: datetime | None, _info: Any) -> str | None:
-        if updated_at is not None:
-            return updated_at.isoformat()
-
-        return None
+        return updated_at.isoformat() if updated_at is not None else None
 
 class PersistentDeletion(BaseModel):
     deleted_at: datetime | None = Field(default=None)
@@ -31,7 +25,4 @@ class PersistentDeletion(BaseModel):
 
     @field_serializer('deleted_at')
     def serialize_dates(self, deleted_at: datetime | None, _info: Any) -> str | None:
-        if deleted_at is not None:
-            return deleted_at.isoformat()
-        
-        return None
+        return deleted_at.isoformat() if deleted_at is not None else None
