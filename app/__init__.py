@@ -18,3 +18,11 @@ Usage:
 
 For more information and examples, please refer to the documentation at <insert documentation link>.
 """
+__VERSION__ = "0.1.0"
+
+
+# make the imports for library users easier
+from .schemas.core import ModelGenerator as Model
+from .core.handlers.base import BaseCRUD as CRUD
+
+MakeModel = Model.make_model

@@ -1,8 +1,8 @@
 from pymongo.results import (
-    BulkWriteResult,
-    DeleteResult,
-    InsertManyResult,
-    InsertOneResult,
-    UpdateResult,
+    BulkWriteResult as DBBulkWriteResult,
+    DeleteResult as DBDeleteResult,
+    InsertManyResult as DBInsertManyResult,
+    InsertOneResult as DBInsertOneResult,
+    UpdateResult as DBUpdateResult,
 )
-from motor.core import AgnosticCollection, AgnosticCursor
+from motor.core import AgnosticCollection as AgnosticCollection, AgnosticCursor as AgnosticCursor

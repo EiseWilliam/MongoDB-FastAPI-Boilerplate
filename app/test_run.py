@@ -1,11 +1,11 @@
 import asyncio
 
 from database.mongo import db
-from schemas.core import TimestampSchema
+from schemas.core import Timestamp
 from schemas.mongo import FromMongo
 
 
-class PersontoDB(TimestampSchema):
+class PersontoDB(Timestamp):
     name: str
     age: int
 

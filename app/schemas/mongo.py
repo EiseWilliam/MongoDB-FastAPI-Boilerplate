@@ -9,9 +9,7 @@ class FromMongo(BaseModel):
     
     @validator('id', pre=True)
     def validate_id(cls, id: str | ObjectId) -> str:
-        if isinstance(id, ObjectId):
-            return str(id)
-        return id
+        return str(id) if isinstance(id, ObjectId) else id
     
     # @field_serializer('id')
     # def serialize_id(self, id: str | ObjectId) -> str:
